@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - ASC Secure</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="~/css/materialize.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+
+    <style>
+            body {
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+                background-color: #f5f5f5;
+            }
+
+            main {
+                flex: 1 0 auto;
+            }
+
+            .secure-wrapper {
+                display: flex;
+                min-height: calc(100vh - 64px);
+            }
+
+            .secure-sidebar {
+                width: 260px;
+                background: #ffffff;
+                border-right: 1px solid #e0e0e0;
+            }
+
+            .secure-profile {
+                background: #90a4ae;
+                color: white;
+                padding: 24px 16px;
+                text-align: center;
+            }
+
+                .secure-profile img {
+                    width: 72px;
+                    height: 72px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-bottom: 10px;
+                    background: white;
+                }
+
+                .secure-profile .name {
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+
+                .secure-profile .email {
+                    font-size: 13px;
+                    opacity: 0.95;
+                }
+
+            .secure-menu {
+                margin: 0;
+            }
+
+                .secure-menu li a {
+                    color: #424242;
+                    display: block;
+                    padding: 14px 20px;
+                    border-bottom: 1px solid #f0f0f0;
+                }
+
+                    .secure-menu li a:hover {
+                        background-color: #f5f5f5;
+                    }
+
+                .secure-menu i {
+                    vertical-align: middle;
+                    margin-right: 10px;
+                    font-size: 18px;
+                }
+
+            .secure-content {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                min-width: 0;
+            }
+
+            .secure-header {
+                background: #90a4ae;
+                color: white;
+                padding: 14px 24px;
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            .secure-body {
+                padding: 24px;
+                background: white;
+                min-height: 420px;
+            }
+
+            .secure-footer {
+                background: #90a4ae;
+                color: white;
+                padding-top: 24px;
+            }
+
+                .secure-footer a {
+                    color: #ffffff;
+                }
+
+                .secure-footer .footer-copyright {
+                    background: rgba(0,0,0,0.08);
+                }
+
+            @@media only screen and (max-width: 992px) {
+                .secure-wrapper {
+                    flex-direction: column;
+                }
+
+                .secure-sidebar {
+                    width: 100%;
+                    border-right: none;
+                    border-bottom: 1px solid #e0e0e0;
+                }
+            }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="secure-wrapper">
+            <aside class="secure-sidebar">
+                <div class="secure-profile">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User Avatar" />
+                    <div class="name">John Doe</div>
+                    <div class="email">jdoehr@jkrg-mail.com</div>
+                </div>
+
+                <ul class="secure-menu">
+                    <li><a asp-controller="Home" asp-action="DashboardSecure"><i class="material-icons">dashboard</i>Dashboard</a></li>
+                    <li><a href="#!"><i class="material-icons">supervisor_account</i>User Administration</a></li>
+                    <li><a href="#!"><i class="material-icons">people</i>Customers</a></li>
+                    <li><a href="#!"><i class="material-icons">person_add</i>Provision User</a></li>
+                    <li><a href="#!"><i class="material-icons">person_off</i>Deactivate User</a></li>
+                    <li><a asp-controller="ServiceRequests" asp-action="Index"><i class="material-icons">build</i>Service Requests</a></li>
+                    <li><a href="#!"><i class="material-icons">notifications</i>Service Notifications</a></li>
+                    <li><a href="#!"><i class="material-icons">local_offer</i>Promotions</a></li>
+                    <li><a href="#!"><i class="material-icons">settings</i>Settings</a></li>
+                    <li><a asp-controller="Home" asp-action="Index"><i class="material-icons">logout</i>Logout</a></li>
+                </ul>
+            </aside>
+
+            <section class="secure-content">
+                <div class="secure-header">
+                    Automobile Service Center
+                </div>
+
+                <div class="secure-body">
+                    @RenderBody()
+                </div>
+
+                <footer class="secure-footer">
+                    <div class="container" style="width: 100%; max-width: 100%; padding: 0 24px;">
+                        <div class="row" style="margin-bottom:0;">
+                            <div class="col s12 m5">
+                                <h5 class="white-text">About Us</h5>
+                                <p class="grey-text text-lighten-4">
+                                    Automobile Service Center is certified Company to perform car services.
+                                    Our Workshop operations started in the month of October, 2010.
+                                    We primarily focus on providing better services to our customers,
+                                    and as a result of the hard work we were awarded as the "Best Service"
+                                    for the year 2008 and that too within a short period of time.
+                                </p>
+                            </div>
+                            <div class="col s12 m3">
+                                <h5 class="white-text">Additional Services</h5>
+                                <ul>
+                                    <li><a href="#!">Services</a></li>
+                                    <li><a href="#!">Finance</a></li>
+                                    <li><a href="#!">Used Cars</a></li>
+                                    <li><a href="#!">Insurance</a></li>
+                                    <li><a href="#!">Driving School</a></li>
+                                </ul>
+                            </div>
+                            <div class="col s12 m4">
+                                <h5 class="white-text">Connect</h5>
+                                <ul>
+                                    <li><a href="#!">Facebook</a></li>
+                                    <li><a href="#!">LinkedIn</a></li>
+                                    <li><a href="#!">Twitter</a></li>
+                                    <li><a href="#!">Youtube</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-copyright">
+                        <div class="container" style="width: 100%; max-width: 100%; padding: 0 24px;">
+                            Powered by Materialize
+                        </div>
+                    </div>
+                </footer>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="~/js/materialize.js"></script>
+    <script src="~/js/init.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,100 @@
+﻿@model HuyThuanPhuoc_ASC.Web.Models.DashboardViewModel
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <br><br>
+            <h1 class="header center teal-text text-lighten-2">@Model.ApplicationName</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">@Model.DashboardTitle</h5>
+            </div>
+            <div class="row center">
+                <a asp-controller="ServiceRequests" asp-action="Index" class="btn-large waves-effect waves-light teal lighten-1">
+                    View Service Requests
+                </a>
+            </div>
+            <br><br>
+        </div>
+    </div>
+    <div class="parallax"><img src="~/background1.jpg" alt="Background 1"></div>
+</div>
+
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center brown-text"><i class="material-icons">admin_panel_settings</i></h2>
+                    <h5 class="center">Administrator</h5>
+                    <p class="light">
+                        Manage users, monitor service requests, and control overall system operations.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center brown-text"><i class="material-icons">build</i></h2>
+                    <h5 class="center">Service Engineer</h5>
+                    <p class="light">
+                        Process automobile service jobs, update request status, and perform maintenance tasks.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center brown-text"><i class="material-icons">directions_car</i></h2>
+                    <h5 class="center">Customer</h5>
+                    <p class="light">
+                        Submit service requests, track progress, and receive notifications from the system.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h5 class="header col s12 light">Core features for a modern automobile service management system</h5>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src="~/background2.jpg" alt="Background 2"></div>
+</div>
+
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="col s12 center">
+                <h3><i class="material-icons brown-text">dashboard</i></h3>
+                <h4>Project Overview</h4>
+                <p class="left-align light">
+                    The Automobile Service Center (ASC) project is a web-based application that supports
+                    customer service requests, administration, and service engineer operations.
+                    This system is being developed step by step using ASP.NET Core MVC, configuration management,
+                    dependency injection, and will be extended in later labs with layered architecture,
+                    domain-driven design, testing, and security.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h5 class="header col s12 light">Built with ASP.NET Core MVC .NET 8 and Materialize CSS</h5>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src="~/background3.jpg" alt="Background 3"></div>
+</div>

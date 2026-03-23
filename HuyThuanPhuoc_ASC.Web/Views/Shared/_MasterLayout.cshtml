@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - ASC</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="~/css/materialize.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a asp-controller="Home" asp-action="Index" id="logo-container" class="brand-logo">ASC</a>
+
+            <ul class="right hide-on-med-and-down">
+                <li><a asp-controller="Home" asp-action="Index">Dashboard</a></li>
+                <li><a asp-controller="Home" asp-action="DashboardSecure">Secure Dashboard</a></li>
+                <li><a asp-controller="ServiceRequests" asp-action="Index">Service Requests</a></li>
+                <li><a asp-controller="Products" asp-action="Index">Products</a></li>
+                <li><a asp-controller="Home" asp-action="Privacy">About Project</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a asp-controller="Home" asp-action="Index">Dashboard</a></li>
+                <li><a asp-controller="Home" asp-action="DashboardSecure">Secure Dashboard</a></li>
+                <li><a asp-controller="ServiceRequests" asp-action="Index">Service Requests</a></li>
+                <li><a asp-controller="Products" asp-action="Index">Products</a></li>
+                <li><a asp-controller="Home" asp-action="Privacy">About Project</a></li>
+            </ul>
+
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+    </nav>
+
+    @RenderBody()
+
+    <footer class="page-footer teal">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Automobile Service Center</h5>
+                    <p class="grey-text text-lighten-4">
+                        ASC is a web-based system for service request processing,
+                        administration, and customer interaction.
+                    </p>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Navigation</h5>
+                    <ul>
+                        <li><a class="white-text" asp-controller="Home" asp-action="Index">Dashboard</a></li>
+                        <li><a class="white-text" asp-controller="Home" asp-action="DashboardSecure">Secure Dashboard</a></li>
+                        <li><a class="white-text" asp-controller="ServiceRequests" asp-action="Index">Service Requests</a></li>
+                        <li><a class="white-text" asp-controller="Products" asp-action="Index">Products</a></li>
+                        <li><a class="white-text" asp-controller="Home" asp-action="Privacy">About Project</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Technology</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">ASP.NET Core MVC</a></li>
+                        <li><a class="white-text" href="#!">Materialize CSS</a></li>
+                        <li><a class="white-text" href="#!">Dependency Injection</a></li>
+                        <li><a class="white-text" href="#!">Configuration</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2026 ASC Project
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="~/js/materialize.js"></script>
+    <script src="~/js/init.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="ASC.Business/ASC.Business.csproj" Id="8d5835e8-175c-42ff-94a0-9f2496aece38" />
+  <Project Path="ASC.DataAccess/ASC.DataAccess.csproj" Id="097c5719-4372-4afb-b5e4-c3159c8ca67b" />
+  <Project Path="ASC.Model/ASC.Model.csproj" Id="1bf845cd-1ea6-4904-823f-d0de05bcc8e7" />
+  <Project Path="ASC.Utilities/ASC.Utilities.csproj" Id="d0a407d1-6d1a-45a4-9682-e63c5c029951" />
+  <Project Path="HuyThuanPhuoc_ASC.Web/HuyThuanPhuoc_ASC.Web.csproj" />
+</Solution>
